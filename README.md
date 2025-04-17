@@ -8,7 +8,7 @@ EOSource Revived is a modern, secure, and transparent rebuild of the classic End
 
 ## 🔐 Security & Transparency
 
-EOSource has been completely re-engineered to prioritize security and transparency:
+EOSource has been completely re-worked to prioritize security and transparency:
 
 - **No Backdoors** – All known backdoors have been removed, ensuring server integrity.
 - **Server Owner Controlled** – There is no code that allows unauthorized shutdowns or remote access. Server owners retain full control at all times.
