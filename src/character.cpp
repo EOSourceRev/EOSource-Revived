@@ -2797,13 +2797,6 @@ void Character::GiveRebirth(short rebirth)
 void Character::GiveEXP(int exp)
 {
     this->exp += exp;
-
-    PacketBuilder builder;
-    builder.SetID(PACKET_PARTY, PACKET_TARGET_GROUP);
-    builder.AddShort(this->player->id);
-    builder.AddInt(exp);
-    this->Send(builder);
-
     this->CalculateTNL();
 }
 
@@ -2853,6 +2846,11 @@ void Character::CalculateTNL()
     builder.AddInt(this->exp);
     builder.AddShort(this->karma);
     builder.AddChar(level_up ? this->level : 0);
+	if (level_up)
+	{
+		builder.AddShort(this->statpoints);
+		builder.AddShort(this->skillpoints);
+	}
     this->Send(builder);
 
     if (level_up)
